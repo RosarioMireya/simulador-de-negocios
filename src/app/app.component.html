@@ -1,0 +1,26 @@
+<div class="formulario">
+    <div *ngIf="!(authService.user | async)">
+        <label for="email">email</label>
+        <input type="text" [(ngModel)]="email" placeholder="email" required>
+        <label for="password">password</label>
+        <input type="password" [(ngModel)]="password" placeholder="password" required>
+      
+        <button type="submit"  (click)="login()" [disabled]="!email || !password">
+            Login
+        </button>
+        
+        <h5 id="or">or</h5>
+        <button (click)="signup()" [disabled]="!email || !password">
+          Signup
+        </button>
+      
+        
+      </div>
+</div>
+
+<div class="formulario">
+    <h1 *ngIf="authService.user | async">Welcome {{ (authService.user | async)?.email }}!</h1>
+    <button (click)="logout()" *ngIf="authService.user | async" auto>
+        Logout
+      </button>
+</div>
