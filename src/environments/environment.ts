@@ -6,7 +6,7 @@
 //  production: false
 //};
 export const environment = {
-  production: false,
+  production: true,
   firebase: {
     apiKey: "AIzaSyCZZroJKr1nOBt936wigMKlGcLVup-UVEY",
     authDomain: "simulaciondenegocios-ab936.firebaseapp.com",
