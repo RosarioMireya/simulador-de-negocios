@@ -13,7 +13,7 @@ input[type=text], input[type=password] {
 
 /* Set a style for all buttons */
 button {
-    background-color:indigo;
+    background-color:rgb(24, 76, 133);
     color: white;
     padding: 14px 20px;
     margin: 8px 0;
@@ -159,11 +159,11 @@ input[type=password]:focus {
     border: 3px solid #555;
 }
 input[type=email]:focus {
-    border: 3px solid #555;
+    border: 3px solid rgb(113,110,111);
 }
 input[type=submit] {
     width: 100%;
-    background-color: indigo;
+    background-color: rgb(24, 76, 133);
     color: white;
     padding: 14px 20px;
     margin: 8px 0;
@@ -171,15 +171,7 @@ input[type=submit] {
     border-radius: 4px;
     cursor: pointer;
 }
-header{
-    width: 100%;
-    padding: 1rem;
-    background-color: indigo;
-    color: white;
-    text-align: center;
-    font-family: "arial";
 
-}
 .formulario{
     width: 50%;
     margin-left: 25%;
@@ -190,8 +182,6 @@ header{
     background-color: #f2f2f2;
     padding: 20px;
 
-}
-text{
 }
 h5{
     text-align: center;
