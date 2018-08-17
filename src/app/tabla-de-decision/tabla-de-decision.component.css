@@ -137,3 +137,15 @@ table#t01 th {
     width: 30%;
     margin-left: 40%;
 }
+.boton-decision{
+    background-color: rgb(24, 76, 208);
+}
+.boton-t-analisis{
+    background-color: rgb(0, 139, 208);
+}
+.boton-informe{
+    background-color: rgb(0, 197, 245);
+}
+.boton-analisis{
+    background-color: rgb(0, 168, 233);
+}

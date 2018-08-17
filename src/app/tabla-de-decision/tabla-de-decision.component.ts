@@ -20,23 +20,30 @@ export class TablaDeDecisionComponent implements OnInit {
     document.getElementById("tabla-analisis").style.display="none";
     document.getElementById("informe").style.display="none";
     document.getElementById("analisis").style.display="none";
+    document.getElementById("titulo").innerText="MIS DECISIONES";
   }
   tanalisis(){
     document.getElementById("decisiones").style.display="none";
     document.getElementById("tabla-analisis").style.display="block";
     document.getElementById("informe").style.display="none";
     document.getElementById("analisis").style.display="none";
+    document.getElementById("titulo").innerText="ANALISIS DE LA INDUSTRIA";
+
   }
   informe(){
     document.getElementById("decisiones").style.display="none";
     document.getElementById("tabla-analisis").style.display="none";
     document.getElementById("informe").style.display="block";
     document.getElementById("analisis").style.display="none";
+    document.getElementById("titulo").innerText="INFORMES DE LA COMPAÑIA";
+
   }
   analisis(){
     document.getElementById("decisiones").style.display="none";
     document.getElementById("tabla-analisis").style.display="none";
     document.getElementById("informe").style.display="none";
     document.getElementById("analisis").style.display="block";
+    document.getElementById("titulo").innerText="ANALISIS";
+
   }
 }
