@@ -54,7 +54,6 @@ header{
     background-color: rgb(24, 76, 133);
     padding: 20px;
     float:left;
-
 }
 
 .tabla-proyecciones{
@@ -70,7 +69,6 @@ header{
     background-color: rgb(24, 76, 133);
     padding: 20px;
     float:left;
-
 }
 .proyecciones{
     color: black;
@@ -78,6 +76,22 @@ header{
     background-color: white;
     width: 100%;
 }
+.tabla-analisis{
+    width: 40%;
+    height: 26em;
+    margin-left: 25%;
+    margin-top: 2%;
+    padding: 1rem;
+    border-radius: 5px;
+    text-align: center;
+    color: white;
+    font-family: "arial";
+    background-color: rgb(24, 76, 133);
+    padding: 20px;
+    float:left;
+}
+
+
 p{
     color:  rgb(116, 197, 233);
 }
