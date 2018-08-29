@@ -25,46 +25,47 @@
 </div>
 <div id="decisiones">
     <div class="tabla-decision">
-        <h3>BIMESTRES</h3> 
+        <h3>BIMESTRES</h3>
        <table id="t01">
          <tr>
            <th class="th1">DETALLE</th>
            <th class="tr1">INICIAL</th>
            <th class="tr1"> </th>
            <th class="tr1">B-1</th>
-       
+
          </tr>
          <tr>
            <td>PRECIO UNITARIO</td>
            <td>14</td>
            <td id="pu1"></td>
-           <td><input  type="number" id="precio-ini" name="precio-ini" min="1" value=14>
+           <td><input  type="number" id="precio-ini" name="precio-ini" min="0" max="50" value=14 step="0.5">
            </td>
          </tr>
          <tr>
            <td>PRODUCCIÓN</td>
            <td>10000</td>
            <td id="p1"></td>
-           <td><input type="number" id="produccion-ini" name="precio-ini" min="1" value=1000>
+           <td><input type="number" id="produccion-ini" name="produccion-ini" min="0" value=10000>
          </tr>
          <tr>
            <td>INVERSION EN MARKETING</td>
            <td>1000</td>
            <td id="im1"></td>
-           <td><input type="number" id="inversion-ini" name="precio-ini" min="1" value=1000>  </tr>
+           <td><input type="number" id="inversion-ini" name="inversion-ini" min="0" value=1000>
+         </tr>
          <tr>
            <td>INVERSION  EN INVESTIGACIÓN</td>
            <td>1000</td>
            <td id="ii1"></td>
-           <td><input type="number" id="investigacion-ini" name="precio-ini" min="1" value=1000>
+           <td><input type="number" id="investigacion-ini" name="investigacion-ini" min="0" value=1000>
          </tr>
          <tr>
            <td>INVERSION EN ACTIVOS</td>
-           <td>1000</td>
+           <td>80000</td>
            <td id="ia1"></td>
-           <td><input type="number" id="activos-ini" name="precio-ini" min="1" value=1000>  </tr>
+           <td><input type="number" id="activos-ini" name="activos-ini" min="0" value=80000>  </tr>
        </table>
-       
+
        </div>
        <div class="tabla-proyecciones">
         PROYECCIONES
@@ -81,7 +82,7 @@
               <P>PRODUCCIÓN</P>
               <P>MARKETING</P>
               <P>INV. ACTIVOS</P>
-              <P>INV. INVESTIGACIÓN</P>              
+              <P>INV. INVESTIGACIÓN</P>
             </div>
             <li><span> <i class="material-icons" (click)="resultadosDiv()"  style="font-size:18px; color:blue">bookmark</i></span>RESULTADO</li>
             <div id="div-resultados">
@@ -126,7 +127,7 @@
       <td>3000</td>
       <td>9</td>
       <td>10</td>
-    </tr>    
+    </tr>
     <tr>
       <td>COMPAÑIA 4</td>
       <td>250</td>
