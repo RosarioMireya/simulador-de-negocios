@@ -37,53 +37,58 @@
          <tr>
            <td>PRECIO UNITARIO</td>
            <td>14</td>
-           <td></td>
-           <td><input type="number" id="precio-ini" name="precio-ini" min="1">
+           <td id="pu1"></td>
+           <td><input  type="number" id="precio-ini" name="precio-ini" min="0" max="50" value=14 step="0.5">
            </td>
          </tr>
          <tr>
            <td>PRODUCCIÓN</td>
            <td>10000</td>
-           <td></td>
-           <td><input type="number" id="precio-ini" name="precio-ini" min="1">
+           <td id="p1"></td>
+           <td><input type="number" id="produccion-ini" name="produccion-ini" min="0" value=10000>
          </tr>
          <tr>
            <td>INVERSION EN MARKETING</td>
            <td>1000</td>
-           <td></td>
-           <td><input type="number" id="precio-ini" name="precio-ini" min="1">  </tr>
+           <td id="im1"></td>
+           <td><input type="number" id="inversion-ini" name="inversion-ini" min="0" value=1000>
+         </tr>
          <tr>
            <td>INVERSION  EN INVESTIGACIÓN</td>
            <td>1000</td>
-           <td></td>
-           <td><input type="number" id="precio-ini" name="precio-ini" min="1">
+           <td id="ii1"></td>
+           <td><input type="number" id="investigacion-ini" name="investigacion-ini" min="0" value=1000>
          </tr>
          <tr>
            <td>INVERSION EN ACTIVOS</td>
-           <td>1000</td>
-           <td></td>
-           <td><input type="number" id="precio-ini" name="precio-ini" min="1">  </tr>
+           <td>80000</td>
+           <td id="ia1"></td>
+           <td><input type="number" id="activos-ini" name="activos-ini" min="0" value=80000>  </tr>
        </table>
 
        </div>
        <div class="tabla-proyecciones">
         PROYECCIONES
         <div class="proyecciones">
-          <ul>
-            <li>CAPITAL DISPONIBLE</li>
-            <li>INGRESOS </li>
-            <p>VENTAS</p>
-            <P>OTROS INGRESOS</P>
-            <li>GASTOS</li>
-            <P>PRODUCCIÓN</P>
-            <P>MARKETING</P>
-            <P>INV. ACTIVOS</P>
-            <P>INV. INVESTIGACIÓN</P>
-            <li>RESULTADO</li>
+          <ul style="list-style-type:none">
+            <li> <span> <i class="material-icons" (click)="general()"  style="font-size:18px; color:blue">bookmark</i></span> CAPITAL DISPONIBLE</li>
+            <li><span> <i class="material-icons" (click)="ingresoDiv()"  style="font-size:18px; color:blue">bookmark</i></span> INGRESOS </li>
+            <div id="div-ingresos">
+              <p>VENTAS</p>
+              <P>OTROS INGRESOS</P>
+            </div>
+            <li><span> <i class="material-icons" (click)="gastosDiv()"  style="font-size:18px; color:blue">bookmark</i></span>GASTOS</li>
+            <div id="div-gastos">
+              <P>PRODUCCIÓN</P>
+              <P>MARKETING</P>
+              <P>INV. ACTIVOS</P>
+              <P>INV. INVESTIGACIÓN</P>
+            </div>
+            <li><span> <i class="material-icons" (click)="resultadosDiv()"  style="font-size:18px; color:blue">bookmark</i></span>RESULTADO</li>
+            <div id="div-resultados">
             <p>EFECTIVO DISPONIBLE</p>
             <P>UTILIDAD ESPERADA</P>
-
-
+            </div>
           </ul>
         </div>
        </div>
@@ -93,6 +98,7 @@
 </div>
 
 <div id="tabla-analisis" class="tabla-analisis">
+
   <div class="sub-tabla-analisis">
       <button (click)="VisionGeneral()" class="boton-vision-general">
         VISION GENERAL
@@ -187,7 +193,7 @@
     <button (click)="EstadoDeResultados()" class="boton-estado-resultados">
       ESTADO DE RESULTADOS
     </button>
-    <button (click)="BalanceGeneral()" class="boton-balace-general">
+    <button (click)="BalanceGeneral()" class="boton-balance-general">
       BALANCE GENERAL
     </button>
     <button (click)="Ventas()" class="boton-ventas">
@@ -243,6 +249,7 @@
         </button>
   </div>
 
+
   <div id="produccionvsventasID">PRODUCCION vs VENTAS
     <p>Siguientes historias</p>
   </div>
@@ -264,5 +271,4 @@
   <div id="consejosID">CONSEJOS
     <p>Siguientes historias</p>
   </div>
-
 </div>
