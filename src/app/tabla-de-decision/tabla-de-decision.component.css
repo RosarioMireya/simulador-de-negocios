@@ -12,7 +12,7 @@ aside {
     position: relative;
     top: 0%;
     width: 100%;
-    background-color:rgb(113,110,111); 
+    background-color:rgb(113,110,111);
 }
 img{
     position: sticky;
@@ -148,4 +148,26 @@ table#t01 th {
 }
 .boton-analisis{
     background-color: rgb(0, 168, 233);
+}
+
+
+
+.boton-prod-ventas, .boton-costo-precio,.boton-capacidad-produccion, .boton-compania-competencia, .boton-consejos{
+  background-color:rgb(0, 168, 233);
+  width: auto;
+  border: 1px black solid;
+  border-radius: 12px;
+}
+
+.boton-estado-resultados, .boton-balace-general, .boton-ventas, .boton-produccion, .boton-compania{
+  background-color:rgb(0, 197, 245);
+  width: auto;
+  border: 1px black solid;
+  border-radius: 12px;
+}
+.boton-vision-general, .boton-produccion-tabla-analisis, .boton-ventas-tabla-analisis, .boton-economia, .boton-porcentaje-mercado{
+  background-color:rgb(0, 139, 208);
+  width: auto;
+  border: 1px black solid;
+  border-radius: 12px;
 }

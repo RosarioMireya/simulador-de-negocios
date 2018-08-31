@@ -25,14 +25,14 @@
 </div>
 <div id="decisiones">
     <div class="tabla-decision">
-        <h3>BIMESTRES</h3> 
+        <h3>BIMESTRES</h3>
        <table id="t01">
          <tr>
            <th class="th1">DETALLE</th>
            <th class="tr1">INICIAL</th>
            <th class="tr1"> </th>
            <th class="tr1">B-1</th>
-       
+
          </tr>
          <tr>
            <td>PRECIO UNITARIO</td>
@@ -64,7 +64,7 @@
            <td></td>
            <td><input type="number" id="precio-ini" name="precio-ini" min="1">  </tr>
        </table>
-       
+
        </div>
        <div class="tabla-proyecciones">
         PROYECCIONES
@@ -82,7 +82,7 @@
             <li>RESULTADO</li>
             <p>EFECTIVO DISPONIBLE</p>
             <P>UTILIDAD ESPERADA</P>
-            
+
 
           </ul>
         </div>
@@ -91,70 +91,178 @@
         ENVIAR MIS DECISIONES
     </button>
 </div>
+
 <div id="tabla-analisis" class="tabla-analisis">
-  <h3>VISION GENERAL</h3>
-  <table id="t01">
-    <tr>
-      <th class="th1">COMPAÑIA</th>
-      <th class="tr1">VENTAS</th>
-      <th class="tr1">BENEFICIO</th>
-      <th class="tr1">PRECIO.U</th>
-      <th class="tr1">% MERCADO</th>
-    </tr>
-    <tr>
-      <td>CBA COMPANY</td>
-      <td>2000</td>
-      <td>8000</td>
-      <td>10</td>
-      <td>40</td>
-    </tr>
-    <tr>
-      <td>COMPAÑIA 2</td>
-      <td>500</td>
-      <td>2000</td>
-      <td>12</td>
-      <td>10</td>
-    </tr>
-    <tr>
-      <td>COMPAÑIA 3</td>
-      <td>300</td>
-      <td>3000</td>
-      <td>9</td>
-      <td>10</td>
-    </tr>    
-    <tr>
-      <td>COMPAÑIA 4</td>
-      <td>250</td>
-      <td>2000</td>
-      <td>11</td>
-      <td>10</td>
-    </tr>
-    <tr>
-      <td>COMPAÑIA 5</td>
-      <td>1000</td>
-      <td>4000</td>
-      <td>10</td>
-      <td>30</td>
-    </tr>
-    <tr>
-      <td>TOTALES</td>
-      <td>4050</td>
-      <td>15000</td>
-      <td>FROM: 10</td>
-      <td>100</td>
-    </tr>
-  </table>
+  <div class="sub-tabla-analisis">
+      <button (click)="VisionGeneral()" class="boton-vision-general">
+        VISION GENERAL
+      </button>
+      <button (click)="ProduccionTablaAnalisis()" class="boton-produccion-tabla-analisis">
+        PRODUCCION
+      </button>
+      <button (click)="VentasTablaAnalisis()" class="boton-ventas-tabla-analisis">
+        VENTAS
+      </button>
+      <button (click)="Economia()" class="boton-economia">
+        ECONOMIA
+      </button>
+      <button (click)="PorcentajeMercado()" class="boton-porcentaje-mercado">
+        % MERCADO
+      </button>
+  </div>
+
+  <div id="VisionGeneralID">
+    <table id="t01">
+      <tr>
+        <th class="th1">COMPAÑIA</th>
+        <th class="tr1">VENTAS</th>
+        <th class="tr1">BENEFICIO</th>
+        <th class="tr1">PRECIO.U</th>
+        <th class="tr1">% MERCADO</th>
+      </tr>
+      <tr>
+        <td>CBA COMPANY</td>
+        <td>2000</td>
+        <td>8000</td>
+        <td>10</td>
+        <td>40</td>
+      </tr>
+      <tr>
+        <td>COMPAÑIA 2</td>
+        <td>500</td>
+        <td>2000</td>
+        <td>12</td>
+        <td>10</td>
+      </tr>
+      <tr>
+        <td>COMPAÑIA 3</td>
+        <td>300</td>
+        <td>3000</td>
+        <td>9</td>
+        <td>10</td>
+      </tr>
+      <tr>
+        <td>COMPAÑIA 4</td>
+        <td>250</td>
+        <td>2000</td>
+        <td>11</td>
+        <td>10</td>
+      </tr>
+      <tr>
+        <td>COMPAÑIA 5</td>
+        <td>1000</td>
+        <td>4000</td>
+        <td>10</td>
+        <td>30</td>
+      </tr>
+      <tr>
+        <td>TOTALES</td>
+        <td>4050</td>
+        <td>15000</td>
+        <td>FROM: 10</td>
+        <td>100</td>
+      </tr>
+    </table>
+  </div>
+
+  <div id="ProduccionTablaAnalisisID">PRODUCCION
+      <p>Siguientes historias</p>
+  </div>
+
+  <div id="VentasTablaAnalisisID">VENTAS
+      <p>Siguientes historias</p>
+  </div>
+
+  <div id="EconomiaID">ECONOMIA
+      <p>Siguientes historias</p>
+  </div>
+
+  <div id="PorcentajeMercado">% MERCADO
+      <p>Siguientes historias</p>
+  </div>
 </div>
 
 <div id="informe" class="tabla-analisis">
-  INFORMES DE LA COMPAÑIA
-  <div>
-    En Desarrollo
+  <div class="sub-tabla-informe">
+    <button (click)="EstadoDeResultados()" class="boton-estado-resultados">
+      ESTADO DE RESULTADOS
+    </button>
+    <button (click)="BalanceGeneral()" class="boton-balace-general">
+      BALANCE GENERAL
+    </button>
+    <button (click)="Ventas()" class="boton-ventas">
+      VENTAS
+    </button>
+    <button (click)="Produccion()" class="boton-produccion">
+      PRODUCCION
+    </button>
+    <button (click)="Compania()" class="boton-compania">
+      COMPAÑIA
+    </button>
+  </div>
+
+  <div id="EstadoDeResultadosID">ESTADO DE RESULTADOS
+    <p>Siguientes historias</p>
+  </div>
+
+  <div id="BalanceGeneralID">BALANCE GENERAL
+    <p>Siguientes historias</p>
+
+  </div>
+
+  <div id="VentasID">VENTAS
+    <p>Siguientes historias</p>
+
+  </div>
+
+  <div id="ProduccionID">PRODUCCION
+    <p>Siguientes historias</p>
+  </div>
+
+  <div id="CompaniaID">COMPAÑIA
+    <p>Siguientes historias</p>
   </div>
 </div>
+
 <div id="analisis" class="tabla-analisis">
-  ANALISIS
-  <div>
-    En Desarrollo
+  <div class="sub-tabla-analisis">
+      <button (click)="produccionvsventas()" class="boton-prod-ventas">
+          PRODUCCION vs VENTAS
+        </button>
+        <button (click)="costovsprecio()" class="boton-costo-precio">
+          COSTO vs PRECIO
+        </button>
+        <button (click)="capacidadvsproduccion()" class="boton-capacidad-produccion">
+          CAPACIDAD vs PRODUCCION
+         </button>
+        <button (click)="companiavscompetencia()" class="boton-compania-competencia">
+        COMPAÑIA vs COMPETENCIA
+        </button>
+        <button (click)="consejos()" class="boton-consejos">
+          CONSEJOS
+        </button>
   </div>
+
+  <div id="produccionvsventasID">PRODUCCION vs VENTAS
+    <p>Siguientes historias</p>
+  </div>
+
+  <div id="costovsprecioID"> COSTO vs PRECIO
+    <p>Siguientes historias</p>
+
+  </div>
+
+  <div id="capacidadvsproduccionID">CAPACIDAD vs PRODUCCION
+    <p>Siguientes historias</p>
+
+  </div>
+
+  <div id="companiavscompetenciaID">COMPAÑIA vs COMPETENCIA
+    <p>Siguientes historias</p>
+  </div>
+
+  <div id="consejosID">CONSEJOS
+    <p>Siguientes historias</p>
+  </div>
+
 </div>
