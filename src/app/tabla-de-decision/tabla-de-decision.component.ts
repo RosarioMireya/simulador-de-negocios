@@ -40,6 +40,11 @@ export class TablaDeDecisionComponent implements OnInit {
     document.getElementById("informe").style.display="none";
     document.getElementById("analisis").style.display="none";
     document.getElementById("titulo").innerText="ANALISIS DE LA INDUSTRIA";
+    document.getElementById("ProduccionTablaAnalisisID").style.display="none";
+    document.getElementById("VentasTablaAnalisisID").style.display="none";
+    document.getElementById("EconomiaID").style.display="none";
+    document.getElementById("PorcentajeMercado").style.display="none";
+
 
   }
   informe(){
@@ -48,6 +53,11 @@ export class TablaDeDecisionComponent implements OnInit {
     document.getElementById("informe").style.display="block";
     document.getElementById("analisis").style.display="none";
     document.getElementById("titulo").innerText="INFORMES DE LA COMPAÑIA";
+    document.getElementById("EstadoDeResultadosID").style.display="none";
+    document.getElementById("BalanceGeneralID").style.display="none";
+    document.getElementById("VentasID").style.display="none";
+    document.getElementById("ProduccionID").style.display="none";
+    document.getElementById("CompaniaID").style.display="none";
 
   }
   analisis(){
@@ -56,7 +66,11 @@ export class TablaDeDecisionComponent implements OnInit {
     document.getElementById("informe").style.display="none";
     document.getElementById("analisis").style.display="block";
     document.getElementById("titulo").innerText="ANALISIS";
-
+    document.getElementById("produccionvsventasID").style.display="none";
+    document.getElementById("costovsprecioID").style.display="none";
+    document.getElementById("capacidadvsproduccionID").style.display="none";
+    document.getElementById("companiavscompetenciaID").style.display="none";
+    document.getElementById("consejosID").style.display="none";
   }
 
 
