@@ -13,16 +13,20 @@ import { FormsModule } from '@angular/forms';
 import { APP_ROUTER } from './app.routes';
 import { TablaDeDecisionComponent } from './tabla-de-decision/tabla-de-decision.component';
 import { LoginComponent } from './login/login.component';
+import { HomeComponent } from './home/home.component';
+import { RegisterComponent } from './register/register.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    TablaDeDecisionComponent,
-    LoginComponent
-  ],
-  imports: [
-    BrowserModule,
-    AngularFireModule.initializeApp(environment.firebase),
+   declarations: [
+      AppComponent,
+      TablaDeDecisionComponent,
+      LoginComponent,
+      HomeComponent,
+      RegisterComponent
+   ],
+   imports: [
+      BrowserModule,
+      AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
     FormsModule,
     APP_ROUTER

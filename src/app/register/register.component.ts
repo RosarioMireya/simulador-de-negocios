@@ -4,15 +4,12 @@ import { AngularFireAuth } from 'angularfire2/auth';
 import * as firebase from 'firebase/app';
 import { RouterLink, Router } from '../../../node_modules/@angular/router';
 
-
-
-
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  selector: 'app-register',
+  templateUrl: './register.component.html',
+  styleUrls: ['./register.component.css']
 })
-export class LoginComponent implements OnInit {
+export class RegisterComponent implements OnInit {
 
   ngOnInit() {
   }
@@ -20,29 +17,14 @@ export class LoginComponent implements OnInit {
   password: string;
 
 
-
   constructor(public authService: AuthService, private _firebaseAuth: AngularFireAuth, private router: Router) {}
 
-
-  login() {
-
-    if(this.authService.login(this.email, this.password)){
-    };
+  signup() {
+    this.authService.signup(this.email, this.password);
     this.email = this.password = '';
-  }
-  signInWithGoogle() {
-    return this._firebaseAuth.auth.signInWithPopup(
-      new firebase.auth.GoogleAuthProvider()
-    )
-  }
-
-  logout() {
-    this.authService.logout();
-    this._firebaseAuth.auth.signOut()
-
+  this.router.navigateByUrl('/tabla');
   }
   tabla(){
     this.router.navigateByUrl('/tabla');
   }
-
 }

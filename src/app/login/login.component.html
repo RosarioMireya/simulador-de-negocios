@@ -2,11 +2,11 @@
 
 <div class="formulario" *ngIf="!(authService.user | async)">
   <div *ngIf="!(authService.user | async)">
-      <label for="email">email</label>
-      <input type="text" [(ngModel)]="email" placeholder="email" required>
-      <label for="password">password</label>
-      <input type="password" [(ngModel)]="password" placeholder="password" required>
-    
+      <label for="email">Email</label>
+      <input  type="text" [(ngModel)]="email" placeholder="email" required/>
+      <label for="password">Password</label>
+      <input type="password" [(ngModel)]="password" placeholder="password" required/>
+
       <button type="button" class="btn btn-block" (click)="signInWithGoogle()">
           <i class="fa fa-google" aria-hidden="true"></i>
           Login with Google
@@ -14,20 +14,15 @@
       <button type="submit"  (click)="login()" [disabled]="!email || !password">
           Login
       </button>
-      
-      <h5 id="or">or</h5>
-      <button (click)="signup()" [disabled]="!email || !password">
-        Signup
-      </button>
-    
-      
+
+
     </div>
 </div>
 
 <div class="formulario" *ngIf="authService.user | async">
   <h1 *ngIf="authService.user | async">Welcome {{ (authService.user | async)?.email }}!</h1>
   <button (click)="tabla()" *ngIf="authService.user | async" auto>
-    go to 'tabla de decisiones'
+    Go to 'tabla de decisiones'
 </button>
   <button (click)="logout()" *ngIf="authService.user | async" auto>
       Logout
